@@ -24,10 +24,19 @@
 // header.style.borderBottom='solid 3px #000';
 // let items=document.getElementsByClassName('title')[0];
 // items.style.color="green";
-let items1=document.getElementsByClassName('list-group-item');
-console.log(items1);
-items1[0].style.fontWeight='bold';
-items1[1].style.fontWeight='bold';
-items1[2].style.fontWeight='bold';
-items1[3].style.fontWeight='bold';
-items1[2].style.backgroundColor='green';
+// let items1=document.getElementsByClassName('list-group-item');
+// console.log(items1);
+// items1[0].style.fontWeight='bold';
+// items1[1].style.fontWeight='bold';
+// items1[2].style.fontWeight='bold';
+// items1[3].style.fontWeight='bold';
+// items1[2].style.backgroundColor='green';
+//get element by tagname
+let li=document.getElementsByTagName('li');
+console.log(li);
+li[1].textContent='hello 2';
+li[1].style.fontWeight='bold';
+li[1].style.backgroundColor='yellow';
+for(let i=0;i<li.length;i++){
+    li[i].style.backgroundColor='#f4f4f4';
+}
