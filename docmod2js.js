@@ -32,11 +32,33 @@
 // items1[3].style.fontWeight='bold';
 // items1[2].style.backgroundColor='green';
 //get element by tagname
-let li=document.getElementsByTagName('li');
-console.log(li);
-li[1].textContent='hello 2';
-li[1].style.fontWeight='bold';
-li[1].style.backgroundColor='yellow';
-for(let i=0;i<li.length;i++){
-    li[i].style.backgroundColor='#f4f4f4';
+// let li=document.getElementsByTagName('li');
+// console.log(li);
+// li[1].textContent='hello 2';
+// li[1].style.fontWeight='bold';
+// li[1].style.backgroundColor='yellow';
+// for(let i=0;i<li.length;i++){
+//     li[i].style.backgroundColor='#f4f4f4';
+// }
+//query selector
+// let header=document.querySelector('#main-header');
+// header.style.borderBottom='solid 4px #ccc';
+// let input=document.querySelector('input');
+// input.value='Hello World';
+// var submit=document.querySelector('input[type="submit"]');
+// submit.value='send';
+// let item=document.querySelector('.list-group-item');
+// item.style.color='red';
+// let lastitem=document.querySelector('.list-group-item:last-child');
+// lastitem.style.color='blue';
+ var secondchild=document.querySelector('.list-group-item:nth-child(2)');
+ secondchild.style.color='green';
+ 
+// Query selectorall
+let titles=document.querySelectorAll('.title');  //queryselectorall takes more than one item
+console.log(titles);
+titles[0].textContent='Hello js';
+var odd=document.querySelectorAll('li:nth-child(odd)');
+for(let i=0;i<odd.length;i++){
+    odd[i].style.backgroundColor='green';
 }
