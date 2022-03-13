@@ -1,9 +1,11 @@
 let form=document.getElementById('addForm');
 var itemlist=document.getElementById('items');
+let filter=document.getElementById('filter');
 //form submit event
 form.addEventListener('submit',addItem);
 //delete event
 itemlist.addEventListener('click',removeItem);
+filter.addEventListener('keyup',filterItems);
 function addItem(e){
     e.preventDefault();
     // get input value
@@ -37,3 +39,19 @@ function removeItem(e){
     }
     
 }
+function filterItems(e){
+    //convert to lowercase
+    var text=e.target.value.toLowerCase();
+    //get lis
+    var items=document.getElementsByTagName('li');
+    // convert to an array
+    Array.from(items).forEach(function(item){
+        var itemname=item.firstChild.textContent;
+        if(itemname.toLowerCase().indexOf(text)!=-1){
+            item.style.display='block';
+        }else{
+            item.style.display='none';
+        }
+
+    }
+    )}
