@@ -1,0 +1,24 @@
+<html>
+    <body>
+        <form onsubmit="saveToLocaStorage(event)">
+        <label>Name</label>
+        <input type="text" name="username" required/>
+        <label>Email</label>
+        <input type="email" name="emailId" required/>
+        <label>Phone</label>
+        <input type="tel" name="Phonenumber"/>
+        <button>Submit</button>
+        </form>
+        <script>
+            function saveToLocaStorage(event){
+                event.preventDefault();
+                const name=event.target.username.value;
+                const email=event.target.emailId.value;
+                const phone=event.target.Phonenumber.value;
+                localStorage.setItem('name',name);
+                localStorage.setItem('email',email);
+                localStorage.setItem('phonenumber',phone);     
+            }
+        </script>
+    </body>
+</html>
