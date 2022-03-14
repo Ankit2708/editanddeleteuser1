@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+</body>
+<script type="text/javascript">
+        let myobj ={
+            name : "Ankit",
+            age :30
+        };
+        let myobj_serialize=JSON.stringify(myobj);//converts it in a string
+        
+        localStorage.setItem("myobj",myobj_serialize);
+        let myobj_deserialize=JSON.parse(localStorage.getItem('myobj'));
+        console.log(myobj_deserialize);
+        
+        let myobj1 ={
+            name : "Anki",
+            age :30
+        };
+        let myobj_serialize1=JSON.stringify(myobj1);//converts it in a string
+        
+        localStorage.setItem("myobj1",myobj_serialize1);
+        let myobj_deserialize1=JSON.parse(localStorage.getItem('myobj1'));
+        console.log(myobj_deserialize1);
+
+    </script>
+</html>
